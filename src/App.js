@@ -85,7 +85,7 @@ const mapdispatchtoProps = dispatch => {
       return axios
         .get("https://jsonplaceholder.typicode.com/posts")
         .then(res => {
-          dispatch({ type: "GET_POST", payload: res.data.slice(0, 5) });
+          dispatch({ type: "GET_POST", payload: res.data });
         });
     },
     deletePost: id => {
